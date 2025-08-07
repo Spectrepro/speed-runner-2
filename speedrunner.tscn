@@ -1,19 +1,60 @@
-[gd_scene load_steps=18 format=4 uid="uid://coo7lugyohxa0"]
+[gd_scene load_steps=20 format=4 uid="uid://syww60djr65w"]
 
-[ext_resource type="Texture2D" uid="uid://cb4nqm6305lxi" path="res://images/Screenshot_6-8-2025_214325_-removebg-preview.png" id="2_5gxl8"]
-[ext_resource type="Texture2D" uid="uid://bbon1srephc07" path="res://images/Screenshot_6-8-2025_21471_-removebg-preview.png" id="3_cdr1q"]
-[ext_resource type="Texture2D" uid="uid://dr3yffjrhoc47" path="res://images/Screenshot_6-8-2025_214523_-removebg-preview.png" id="4_cfw2f"]
-[ext_resource type="Texture2D" uid="uid://fvoxw5d73fyq" path="res://images/Screenshot_6-8-2025_214653_-removebg-preview.png" id="5_8xcb3"]
-[ext_resource type="Texture2D" uid="uid://briuor5y8pnq5" path="res://images/Screenshot_6-8-2025_214557_-removebg-preview.png" id="6_lbeve"]
-[ext_resource type="Texture2D" uid="uid://cb1brbktxoa4l" path="res://images/Screenshot_6-8-2025_214631_-removebg-preview.png" id="7_xhk7x"]
-[ext_resource type="Texture2D" uid="uid://bypoqf424la8v" path="res://images/Screenshot_6-8-2025_214641_-removebg-preview.png" id="8_87kpk"]
-[ext_resource type="Texture2D" uid="uid://boagkie0fw5kf" path="res://images/Screenshot_6-8-2025_214533_-removebg-preview.png" id="9_soh5g"]
-[ext_resource type="Texture2D" uid="uid://bgryj55jhaljb" path="res://images/green.jpg" id="10_k7xv7"]
-[ext_resource type="Texture2D" uid="uid://nb0im8qycbul" path="res://images/imgbin-brown-brown-s-6VSAFQhtp4SiqmbXPeBenTweZ_t-removebg-preview.png" id="11_siccu"]
-[ext_resource type="Texture2D" uid="uid://d4jon78qk4upl" path="res://images/Screenshot_26-7-2025_11578_-removebg-preview.png" id="12_33kwn"]
+[ext_resource type="Script" uid="uid://dt545jve0xmo2" path="res://speedrunner.gd" id="1_vbff1"]
+[ext_resource type="Texture2D" uid="uid://fvoxw5d73fyq" path="res://images/Screenshot_6-8-2025_214653_-removebg-preview.png" id="2_ni5m8"]
+[ext_resource type="Texture2D" uid="uid://bypoqf424la8v" path="res://images/Screenshot_6-8-2025_214641_-removebg-preview.png" id="3_ffrek"]
+[ext_resource type="Texture2D" uid="uid://cb1brbktxoa4l" path="res://images/Screenshot_6-8-2025_214631_-removebg-preview.png" id="4_81pef"]
+[ext_resource type="Texture2D" uid="uid://briuor5y8pnq5" path="res://images/Screenshot_6-8-2025_214557_-removebg-preview.png" id="5_pivp8"]
+[ext_resource type="Texture2D" uid="uid://boagkie0fw5kf" path="res://images/Screenshot_6-8-2025_214533_-removebg-preview.png" id="6_73tal"]
+[ext_resource type="Texture2D" uid="uid://dr3yffjrhoc47" path="res://images/Screenshot_6-8-2025_214523_-removebg-preview.png" id="7_leayk"]
+[ext_resource type="Texture2D" uid="uid://cb4nqm6305lxi" path="res://images/Screenshot_6-8-2025_214325_-removebg-preview.png" id="8_3mvk3"]
+[ext_resource type="Texture2D" uid="uid://bbon1srephc07" path="res://images/Screenshot_6-8-2025_21471_-removebg-preview.png" id="9_rfsqy"]
+[ext_resource type="Texture2D" uid="uid://bgryj55jhaljb" path="res://images/green.jpg" id="10_5d40q"]
+[ext_resource type="Texture2D" uid="uid://nb0im8qycbul" path="res://images/imgbin-brown-brown-s-6VSAFQhtp4SiqmbXPeBenTweZ_t-removebg-preview.png" id="11_07djs"]
+[ext_resource type="Texture2D" uid="uid://d4jon78qk4upl" path="res://images/Screenshot_26-7-2025_11578_-removebg-preview.png" id="12_jrqna"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sb44d"]
-texture = ExtResource("10_k7xv7")
+[sub_resource type="Animation" id="Animation_vbff1"]
+resource_name = "running"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ni5m8"]
+_data = {
+&"running": SubResource("Animation_vbff1")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5gxl8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ni5m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ffrek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_81pef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pivp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_73tal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_leayk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3mvk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rfsqy")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vbff1"]
+texture = ExtResource("10_5d40q")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -21187,13 +21228,13 @@ texture = ExtResource("10_k7xv7")
 178:111/0 = 0
 179:111/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_5gxl8"]
+[sub_resource type="TileSet" id="TileSet_5vw27"]
 tile_shape = 2
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_sb44d")
+sources/0 = SubResource("TileSetAtlasSource_vbff1")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cdr1q"]
-texture = ExtResource("11_siccu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ni5m8"]
+texture = ExtResource("11_07djs")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
@@ -21877,86 +21918,47 @@ texture = ExtResource("11_siccu")
 18:17/0 = 0
 18:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_cfw2f"]
+[sub_resource type="TileSet" id="TileSet_kek77"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_cdr1q")
+sources/0 = SubResource("TileSetAtlasSource_ni5m8")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufkkc"]
-size = Vector2(97, 105.5)
+[node name="Node" type="Node"]
+script = ExtResource("1_vbff1")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ufkkc"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_8xcb3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_87kpk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_xhk7x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_lbeve")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_soh5g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_cfw2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_5gxl8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_cdr1q")
-}],
-"loop": true,
-"name": &"running",
-"speed": 30.0
-}]
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Node2D" type="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(99, 345)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ni5m8")
+}
+autoplay = "running"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(96, 343.051)
+scale = Vector2(0.553333, 0.63051)
+sprite_frames = SubResource("SpriteFrames_5gxl8")
+animation = &"running"
+autoplay = "running"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(110, -1178)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD9/yMAAAA7ADYAAAD9/yUAAAA7ADYAAAD+/yMAAAA8ADYAAAD+/yQAAAA8ADUAAAD+/yUAAAA8ADYAAAD//yMAAAA9ADYAAAD//yQAAAA9ADUAAAD//yUAAAA9ADYAAAAAACMAAAA+ADYAAAAAACQAAAA+ADUAAAAAACUAAAA+ADYAAAABACMAAAA/ADYAAAABACQAAAA/ADUAAAABACUAAAA/ADYAAAACACMAAABAADYAAAACACQAAABAADUAAAACACUAAABAADYAAAADACMAAABBADYAAAADACQAAABBADUAAAADACUAAABBADYAAAAEACMAAABCADYAAAAEACQAAAA7ADYAAAAEACUAAABCADYAAAAFACMAAABDADYAAAAFACQAAAA8ADYAAAAFACUAAAA7ADYAAAAGACMAAABEADYAAAAGACQAAAA9ADYAAAAGACUAAAA8ADYAAAAHACMAAABFADYAAAAHACQAAAA+ADYAAAAHACUAAAA9ADYAAAAIACMAAABGADYAAAAIACQAAAA/ADYAAAAIACUAAAA+ADYAAAAJACMAAABHADYAAAAJACQAAABAADYAAAAJACUAAAA/ADYAAAAKACMAAAA7ADYAAAAKACQAAABBADYAAAAKACUAAABAADYAAAALACMAAAAEAAQAAAALACQAAABCADYAAAALACUAAABBADYAAAD9/yEAAAA7ADQAAAD+/yEAAAA8ADQAAAD+/yIAAAA8ADUAAAD//yEAAAA9ADQAAAD//yIAAAA9ADUAAAAAACEAAAA+ADQAAAAAACIAAAA+ADUAAAABACEAAAA/ADQAAAABACIAAAA/ADUAAAACACEAAABAADQAAAACACIAAABAADUAAAADACEAAABBADQAAAADACIAAABBADUAAAAEACEAAABCADQAAAAEACIAAABCADUAAAAFACEAAABDADQAAAAFACIAAABDADUAAAAGACEAAABEADQAAAAGACIAAABEADUAAAAHACEAAABFADQAAAAHACIAAABFADUAAAAIACEAAABGADQAAAAIACIAAABGADUAAAAJACEAAABHADQAAAAJACIAAABHADUAAAAKACEAAAA7ADQAAAAKACIAAAA7ADUAAAALACEAAAA8ADQAAAALACIAAAA8ADUAAAAMACEAAAA9ADQAAAAMACIAAAA9ADUAAAAMACMAAAAEAAQAAAAMACQAAABDADYAAAAMACUAAAAgACEAAAANACEAAAAgACEAAAANACIAAAA+ADUAAAANACMAAAAEAAQAAAANACQAAABEADYAAAANACUAAABDADYAAAAOACEAAAAgACEAAAAOACIAAAA/ADUAAAAOACMAAAAEAAQAAAAOACQAAABFADYAAAAOACUAAABEADYAAAAPACEAAABAADQAAAAPACIAAABAADUAAAAPACMAAAAEAAQAAAAPACQAAABGADYAAAAPACUAAABFADYAAAAQACEAAABBADQAAAAQACIAAABBADUAAAAQACMAAAAEAAQAAAAQACQAAABHADYAAAAQACUAAABGADYAAAARACEAAABCADQAAAARACIAAABCADUAAAARACMAAAAEAAQAAAARACQAAABIADYAAAARACUAAABHADYAAAASACEAAABDADQAAAASACIAAAAEAAQAAAASACMAAAAEAAQAAAASACQAAABJADYAAAASACUAAABIADYAAAATACEAAABEADQAAAATACIAAAAEAAQAAAATACMAAAAEAAQAAAATACQAAABKADYAAAATACUAAABJADYAAAAUACEAAABFADQAAAAUACIAAABFADUAAAAUACMAAAAEAAQAAAAUACQAAABLADYAAAAUACUAAABKADYAAAA=")
-tile_set = SubResource("TileSet_5gxl8")
+tile_set = SubResource("TileSet_5vw27")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer"]
-tile_map_data = PackedByteArray("AAD//yMAAAAEAAQAAAD//yQAAAAEAAQAAAABACMAAAAEAAQAAAABACQAAAAEAAQAAAACACMAAAAEAAQAAAADACQAAAAEAAQAAAAEACMAAAAEAAQAAAAEACUAAAAEAAQAAAAFACQAAAAEAAQAAAAGACQAAAAEAAQAAAAIACMAAAAEAAQAAAAIACUAAAAEAAQAAAAJACMAAAAEAAQAAAAJACUAAAAEAAQAAAAKACQAAAAEAAQAAAALACMAAAAEAAQAAAALACUAAAAEAAQAAAD+/yIAAAAEAAQAAAD+/yMAAAAEAAQAAAD+/yQAAAAEAAQAAAD//yEAAAAEAAQAAAD//yIAAAAEAAQAAAAAACIAAAAEAAQAAAAAACMAAAAEAAQAAAAAACQAAAAEAAQAAAABACEAAAAEAAQAAAABACIAAAAEAAQAAAACACEAAAAEAAQAAAACACIAAAAEAAQAAAACACQAAAAEAAQAAAADACIAAAAEAAQAAAADACMAAAAEAAQAAAAEACQAAAAEAAQAAAAFACEAAAAEAAQAAAAGACMAAAAEAAQAAAAHACQAAAAEAAQAAAAIACEAAAAEAAQAAAAIACIAAAAEAAQAAAAKACEAAAAEAAQAAAAKACIAAAAEAAQAAAALACEAAAAEAAQAAAALACQAAAAEAAQAAAAMACIAAAAEAAQAAAAMACMAAAAEAAQAAAAMACQAAAAEAAQAAAAMACUAAAAEAAQAAAANACEAAAAEAAQAAAANACMAAAAEAAQAAAANACQAAAAEAAQAAAANACUAAAAEAAQAAAAOACIAAAAEAAQAAAAOACMAAAAEAAQAAAAOACQAAAAEAAQAAAAOACUAAAAEAAQAAAAPACIAAAAEAAQAAAAPACMAAAAEAAQAAAAPACQAAAAEAAQAAAAPACUAAAAEAAQAAAAQACEAAAAEAAQAAAAQACMAAAAEAAQAAAAQACQAAAAEAAQAAAAQACUAAAAEAAQAAAARACEAAAAEAAQAAAARACIAAAAEAAQAAAARACMAAAAEAAQAAAARACQAAAAEAAQAAAARACUAAAAEAAQAAAASACEAAAAEAAQAAAASACIAAAAEAAQAAAASACMAAAAEAAQAAAASACQAAAAEAAQAAAASACUAAAAEAAQAAAATACEAAAAEAAQAAAATACIAAAAEAAQAAAATACMAAAAEAAQAAAATACQAAAAEAAQAAAATACUAAAAEAAQAAAAUACEAAAAEAAQAAAAUACMAAAAEAAQAAAAUACQAAAAEAAQAAAAUACUAAAAEAAQAAAALACcAAAAHAAgAAAAQACcAAAAHAAgAAAAPACcAAAAHAAgAAAAOACcAAAAHAAgAAAAOACYAAAAHAAgAAAANACYAAAAHAAgAAAAMACYAAAAHAAgAAAALACYAAAAHAAgAAAAKACcAAAAHAAgAAAAJACcAAAAHAAgAAAAIACcAAAAHAAgAAAAHACcAAAAHAAgAAAAGACcAAAAHAAgAAAAGACgAAAAHAAgAAAAHACgAAAAHAAgAAAAIACgAAAAHAAgAAAAJACgAAAAHAAgAAAAKACgAAAAHAAgAAAALACgAAAAHAAgAAAAMACgAAAAHAAgAAAANACgAAAAHAAgAAAANACcAAAAHAAgAAAAMACcAAAAHAAgAAAAKACYAAAAHAAgAAAAJACYAAAAHAAgAAAAIACYAAAAHAAgAAAARACcAAAAHAAgAAAASACcAAAAHAAgAAAATACcAAAAHAAgAAAAUACcAAAAHAAgAAAAPACYAAAAHAAgAAAATACYAAAAHAAgAAAASACYAAAAHAAgAAAARACYAAAAHAAgAAAAQACYAAAAHAAgAAAAUACYAAAAHAAgAAAAVACYAAAAHAAgAAAAVACcAAAAHAAgAAAAFACcAAAAHAAgAAAAEACcAAAAHAAgAAAADACcAAAAHAAgAAAACACcAAAAHAAgAAAABACYAAAAHAAgAAAAAACYAAAAHAAgAAAD//yYAAAAHAAgAAAD+/yYAAAAHAAgAAAD9/yYAAAAHAAgAAAD9/ycAAAAHAAgAAAD+/ycAAAAHAAgAAAD+/ygAAAAHAAgAAAD//ygAAAAHAAgAAAD//ykAAAAHAAgAAAAAACkAAAAHAAgAAAABACkAAAAHAAgAAAACACkAAAAHAAgAAAADACkAAAAHAAgAAAAEACkAAAAHAAgAAAAFACkAAAAHAAgAAAAGACoAAAAHAAgAAAAHACoAAAAHAAgAAAAIACoAAAAHAAgAAAAJACoAAAAHAAgAAAAKACoAAAAHAAgAAAALACoAAAAHAAgAAAAMACoAAAAHAAgAAAANACoAAAAHAAgAAAAOACoAAAAHAAgAAAAPACoAAAAHAAgAAAAQACoAAAAHAAgAAAARACoAAAAHAAgAAAASACoAAAAHAAgAAAASACkAAAAHAAgAAAATACkAAAAHAAgAAAATACgAAAAHAAgAAAAUACgAAAAHAAgAAAAVACgAAAAHAAgAAAAVACkAAAAHAAgAAAAUACkAAAAHAAgAAAATACoAAAAHAAgAAAARACkAAAAHAAgAAAAQACkAAAAHAAgAAAAPACkAAAAHAAgAAAAOACkAAAAHAAgAAAANACkAAAAHAAgAAAAMACkAAAAHAAgAAAALACkAAAAHAAgAAAAKACkAAAAHAAgAAAAJACkAAAAHAAgAAAAIACkAAAAHAAgAAAAHACkAAAAHAAgAAAAGACkAAAAHAAgAAAAFACgAAAAHAAgAAAAEACgAAAAHAAgAAAADACgAAAAHAAgAAAA=")
-tile_set = SubResource("TileSet_cfw2f")
+tile_map_data = PackedByteArray("AAD//yMAAAAEAAQAAAD//yQAAAAEAAQAAAABACMAAAAEAAQAAAABACQAAAAEAAQAAAACACMAAAAEAAQAAAADACQAAAAEAAQAAAAEACMAAAAEAAQAAAAEACUAAAAEAAQAAAAFACQAAAAEAAQAAAAGACQAAAAEAAQAAAAIACMAAAAEAAQAAAAIACUAAAAEAAQAAAAJACMAAAAEAAQAAAAJACUAAAAEAAQAAAAKACQAAAAEAAQAAAALACMAAAAEAAQAAAALACUAAAAEAAQAAAD+/yIAAAAEAAQAAAD+/yMAAAAEAAQAAAD+/yQAAAAEAAQAAAD//yEAAAAEAAQAAAD//yIAAAAEAAQAAAAAACIAAAAEAAQAAAAAACMAAAAEAAQAAAAAACQAAAAEAAQAAAABACEAAAAEAAQAAAABACIAAAAEAAQAAAACACEAAAAEAAQAAAACACIAAAAEAAQAAAACACQAAAAEAAQAAAADACIAAAAEAAQAAAADACMAAAAEAAQAAAAEACQAAAAEAAQAAAAFACEAAAAEAAQAAAAGACMAAAAEAAQAAAAHACQAAAAEAAQAAAAIACEAAAAEAAQAAAAIACIAAAAEAAQAAAAKACEAAAAEAAQAAAAKACIAAAAEAAQAAAALACEAAAAEAAQAAAALACQAAAAEAAQAAAAMACIAAAAEAAQAAAAMACMAAAAEAAQAAAAMACQAAAAEAAQAAAAMACUAAAAEAAQAAAANACEAAAAEAAQAAAANACMAAAAEAAQAAAANACQAAAAEAAQAAAANACUAAAAEAAQAAAAOACIAAAAEAAQAAAAOACMAAAAEAAQAAAAOACQAAAAEAAQAAAAOACUAAAAEAAQAAAAPACIAAAAEAAQAAAAPACMAAAAEAAQAAAAPACQAAAAEAAQAAAAPACUAAAAEAAQAAAAQACEAAAAEAAQAAAAQACMAAAAEAAQAAAAQACQAAAAEAAQAAAAQACUAAAAEAAQAAAARACEAAAAEAAQAAAARACIAAAAEAAQAAAARACMAAAAEAAQAAAARACQAAAAEAAQAAAARACUAAAAEAAQAAAASACEAAAAEAAQAAAASACIAAAAEAAQAAAASACMAAAAEAAQAAAASACQAAAAEAAQAAAASACUAAAAEAAQAAAATACEAAAAEAAQAAAATACIAAAAEAAQAAAATACMAAAAEAAQAAAATACQAAAAEAAQAAAATACUAAAAEAAQAAAAUACEAAAAEAAQAAAAUACMAAAAEAAQAAAAUACQAAAAEAAQAAAAUACUAAAAEAAQAAAAVACIAAAAFAAcAAAAVACQAAAAFAAcAAAAVACMAAAAFAAcAAAAVACUAAAAFAAcAAAAVACEAAAAFAAcAAAD9/yIAAAAFAAcAAAD9/yQAAAAFAAcAAAA=")
+tile_set = SubResource("TileSet_kek77")
 
-[node name="Camera2D" type="Camera2D" parent="TileMapLayer"]
-position = Vector2(154.333, 503)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 324)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="enemy" type="Sprite2D" parent="TileMapLayer/Camera2D"]
-position = Vector2(118.583, 5.5)
-scale = Vector2(0.185833, 0.112438)
-texture = ExtResource("12_33kwn")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-4, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(56.5, 350.75)
-shape = SubResource("RectangleShape2D_ufkkc")
-disabled = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(60, 350)
-scale = Vector2(0.553333, 0.55102)
-sprite_frames = SubResource("SpriteFrames_ufkkc")
-animation = &"running"
-autoplay = "running"
-frame_progress = 0.86144
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="enemy" type="Sprite2D" parent="."]
+position = Vector2(794, 368)
+scale = Vector2(0.275, 0.197015)
+texture = ExtResource("12_jrqna")

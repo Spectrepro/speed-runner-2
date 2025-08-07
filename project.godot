@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="speed runner"
-run/main_scene="uid://cjcqt2ioqq41f"
+run/main_scene="uid://dj77x6bx65nox"
 config/features=PackedStringArray("4.4", "Mobile")
 
 [editor_plugins]

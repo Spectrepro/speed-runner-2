@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpnen6r4eb32"]
+
+[ext_resource type="Texture2D" uid="uid://n0uhhgvakuh6" path="res://images/cooltext488211233948907.png" id="1_2xaj3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 204.0
+offset_right = 836.0
+offset_bottom = 329.0
+icon = ExtResource("1_2xaj3")

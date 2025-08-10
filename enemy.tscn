@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1ja2yywq3bmk"]
+
+[ext_resource type="Texture2D" uid="uid://ywtruufvbhf6" path="res://images/big_demon_idle_anim_f0.png" id="1_iifgy"]
+[ext_resource type="Texture2D" uid="uid://7cp4lnwslw6l" path="res://images/big_demon_idle_anim_f1.png" id="2_epg4t"]
+[ext_resource type="Texture2D" uid="uid://cvuy4enhv3umf" path="res://images/big_demon_idle_anim_f2.png" id="3_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://bcp3tvhrikm7o" path="res://images/big_demon_idle_anim_f3.png" id="4_wujgv"]
+[ext_resource type="Script" uid="uid://cvh3jbi2ldnl1" path="res://enemy_spawner.gd" id="5_epg4t"]
+[ext_resource type="PackedScene" uid="uid://cgbsld33vkrhx" path="res://gamescene2.tscn" id="6_3yqyl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7xv7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iifgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_epg4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3yqyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wujgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_siccu"]
+radius = 11.6364
+height = 39.4124
+
+[node name="enemy" type="RigidBody2D"]
+
+[node name="enemy" type="AnimatedSprite2D" parent="."]
+position = Vector2(212, 277.5)
+scale = Vector2(3.1875, 3.13889)
+sprite_frames = SubResource("SpriteFrames_k7xv7")
+autoplay = "default"
+frame_progress = 0.587447
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(-0.627453, 3.66372)
+shape = SubResource("CapsuleShape2D_siccu")
+
+[node name="enemy spawner" type="Node2D" parent="."]
+script = ExtResource("5_epg4t")
+enemy_scene = ExtResource("6_3yqyl")
+
+[node name="Area2D" type="Area2D" parent="."]

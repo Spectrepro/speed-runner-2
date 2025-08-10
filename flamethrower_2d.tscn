@@ -1,0 +1,102 @@
+[gd_scene load_steps=17 format=3 uid="uid://b8mkh773qeaqm"]
+
+[ext_resource type="Script" uid="uid://xa1tcgwctl3o" path="res://player.gd" id="1_sy3b3"]
+[ext_resource type="Texture2D" uid="uid://o01ijr0mp0lw" path="res://images/star-removebg-preview.png" id="2_ibsv6"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214653_-removebg-preview.png" id="3_xyffm"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214641_-removebg-preview.png" id="4_ex15x"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214631_-removebg-preview.png" id="5_ocjhc"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214557_-removebg-preview.png" id="6_xdvs2"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214533_-removebg-preview.png" id="7_gff16"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214523_-removebg-preview.png" id="8_ebds8"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_214325_-removebg-preview.png" id="9_k8xj1"]
+[ext_resource type="Texture2D" path="res://images/Screenshot_6-8-2025_21471_-removebg-preview.png" id="10_4aqik"]
+[ext_resource type="Texture2D" uid="uid://dhkra2oqcwhff" path="res://images/Screenshot_8-8-2025_214846_www.bing.com-removebg-preview (1).png" id="11_xq3u2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46tt8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ibsv6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xyffm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ex15x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ocjhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xdvs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gff16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ebds8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k8xj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4aqik")
+}],
+"loop": true,
+"name": &"running",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vug10"]
+size = Vector2(87.5, 75.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12wx2"]
+
+[sub_resource type="Animation" id="Animation_ufkkc"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sb44d"]
+_data = {
+&"new_animation": SubResource("Animation_ufkkc")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(5, 0)
+script = ExtResource("1_sy3b3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(102, 807)
+scale = Vector2(0.564934, 0.364418)
+sprite_frames = SubResource("SpriteFrames_46tt8")
+animation = &"running"
+autoplay = "running"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(97, 872)
+shape = SubResource("RectangleShape2D_vug10")
+
+[node name="flamethrower" type="Node2D" parent="."]
+position = Vector2(91, 882)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flamethrower"]
+position = Vector2(10, -67)
+shape = SubResource("RectangleShape2D_12wx2")
+
+[node name="flamethrower" type="Area2D" parent="flamethrower"]
+position = Vector2(6, -10)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="flamethrower"]
+position = Vector2(10, -67)
+emitting = false
+texture = ExtResource("11_xq3u2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../flamethrower")
+libraries = {
+&"": SubResource("AnimationLibrary_sb44d")
+}
